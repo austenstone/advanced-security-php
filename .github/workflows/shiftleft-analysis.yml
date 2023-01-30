@@ -8,6 +8,11 @@ on:
   schedule:
     - cron: '18 2 * * 5'
 
+permissions:
+  id-token: write
+  contents: write         # This is required for actions/checkout
+  security-events: write  # To upload sarif files
+  
 jobs:
   Scan-Build:
     runs-on: ubuntu-latest
