@@ -10,4 +10,3 @@ permissions:
 jobs:
   call-workflow-with-secrets:
     uses: austenstone/.github/.github/workflows/reusable-workflow.yml@main
-		
