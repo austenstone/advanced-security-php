@@ -2,11 +2,11 @@ name: Psalm Security Scan
 
 on: [push, pull_request]
 
-defaults:
-  run:
-    shell: bash
-    working-directory: app/plugin/doctrine/Doctrine/Symfony/Component/Yaml
-
+permissions:
+  id-token: write
+  contents: write         # This is required for actions/checkout
+  security-events: write  # To upload sarif files
+    
 jobs:
   psalm:
     name: Psalm
