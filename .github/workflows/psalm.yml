@@ -24,7 +24,8 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: app/plugin/doctrine/Doctrine/Symfony/Component/Yaml/results.sarif
-
+          category: Yaml
+          
       - name: Psalm Security Scan
         uses: docker://ghcr.io/austenstone/psalm-security-scan
         env:
@@ -34,3 +35,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: app/plugin/doctrine/Doctrine/Symfony/Component/Console/results.sarif
+          category: Console
