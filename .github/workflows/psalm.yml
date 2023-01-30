@@ -2,6 +2,11 @@ name: Psalm Security Scan
 
 on: [push, pull_request]
 
+defaults:
+  run:
+    shell: bash
+    working-directory: app/plugin/doctrine/Doctrine/Symfony/Component/Yaml
+
 jobs:
   psalm:
     name: Psalm
