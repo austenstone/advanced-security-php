@@ -23,7 +23,8 @@ jobs:
       - name: Upload Security Analysis results to GitHub
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: app/plugin/doctrine/Doctrine/Symfony/Component/Yaml/results.sarif
+          sarif_file: results.sarif
+          checkout_path: app/plugin/doctrine/Doctrine/Symfony/Component/Yaml
 
       - name: Psalm Security Scan
         uses: docker://ghcr.io/austenstone/psalm-security-scan
@@ -33,4 +34,5 @@ jobs:
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: app/plugin/doctrine/Doctrine/Symfony/Component/Console/results.sarif
+          sarif_file: results.sarif
+          checkout_path: app/plugin/doctrine/Doctrine/Symfony/Component/Console
