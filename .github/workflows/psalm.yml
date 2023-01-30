@@ -29,8 +29,8 @@ jobs:
         uses: docker://ghcr.io/austenstone/psalm-security-scan
         env:
           INPUT_WORKING_DIR: app/plugin/doctrine/Doctrine/Symfony/Component/Console
-          
-      - name: Upload Security Analysis results to GitHub
+
+      - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: app/plugin/doctrine/Doctrine/Symfony/Component/Console/results.sarif
