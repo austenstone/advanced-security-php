@@ -9,4 +9,4 @@ permissions:
     
 jobs:
   call-workflow-with-secrets:
-    uses: austenstone/.github/.github/workflows/reusable-workflow.yml@main
+    uses: austenstone/.github/.github/workflows/psalm-github-security-scan.yml@main
