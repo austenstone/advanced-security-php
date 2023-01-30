@@ -1,0 +1,13 @@
+name: Psalm Security Scan
+
+on: [push, pull_request]
+
+permissions:
+  id-token: write
+  contents: write         # This is required for actions/checkout
+  security-events: write  # To upload sarif files
+    
+jobs:
+  call-workflow-with-secrets:
+    uses: austenstone/.github/.github/workflows/reusable-workflow.yml@main
+		
